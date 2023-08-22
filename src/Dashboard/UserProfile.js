@@ -29,7 +29,6 @@ const UserProfile = () => {
           <p>
             <strong>Name:</strong> {userProfile.name}
           </p>
-          {/* Add more profile information here */}
         </div>
       ) : (
         <p>Loading user profile...</p>

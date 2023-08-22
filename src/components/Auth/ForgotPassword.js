@@ -9,9 +9,7 @@ const ForgotPassword = () => {
     try {
       const response = await forgotPassword(email);
       setMessage(response.data.message);
-    } catch (error) {
-      // Handle error (e.g., show error message)
-    }
+    } catch (error) {}
   };
 
   return (

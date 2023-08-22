@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://travelbackend-9zbn.onrender.com/api/:splat"
+  to = "https://travel-006b.onrender.com/api/:splat"
   status = 200

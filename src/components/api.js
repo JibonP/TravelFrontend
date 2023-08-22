@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://travel-006b.onrender.com";
+const BASE_URL =
+  process.env.REACT_APP_URL || "https://travel-006b.onrender.com";
 
 const api = axios.create({
   baseURL: BASE_URL,

@@ -31,6 +31,7 @@ const Signup = () => {
                 <input
                   type="email"
                   id="email"
+                  placeholder="Enter a fake email address"
                   className="form-control"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -43,6 +44,7 @@ const Signup = () => {
                 <input
                   type="password"
                   id="password"
+                  placeholder="Password must be at least 8 characters long."
                   className="form-control"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}

@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { addDestination } from "../components/api";
-import Loader from "./Loader"; // Import the Loader component
+import Loader from "./Loader";
 
 const AddLocation = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Initialize isLoading as false
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Simulate loading data
     setTimeout(() => {
-      setIsLoading(false); // Turn off loading after 2000 milliseconds
+      setIsLoading(false);
     }, 2000);
   }, []);
 
   const handleAddLocation = async (e) => {
     e.preventDefault();
     try {
-      setIsLoading(true); // Start loading
+      setIsLoading(true);
       await addDestination(name, location);
       navigate("/");
     } catch (error) {
       console.error("Error adding destination:", error);
     } finally {
-      setIsLoading(false); // Stop loading whether success or error
+      setIsLoading(false);
     }
   };
 
@@ -33,7 +32,7 @@ const AddLocation = () => {
     <div className="container mt-5">
       <h3>Add a New Destination</h3>
       {isLoading ? (
-        <Loader /> // Render Loader component if isLoading is true
+        <Loader />
       ) : (
         <form onSubmit={handleAddLocation}>
           <div className="form-group">
