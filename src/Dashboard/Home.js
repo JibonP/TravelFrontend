@@ -79,13 +79,16 @@ const Home = () => {
       </div>
 
       {!authenticated && (
-        <div className="auth-buttons text-center">
-          <Link to="/signup" className="btn btn-primary mr-2">
-            Sign Up
-          </Link>
-          <Link to="/login" className="btn btn-secondary">
-            Log In
-          </Link>
+        <div className="auth-buttons-container text-center">
+          <div className="auth-buttons-box">
+            <Link to="/signup" className="btn btn-primary">
+              Sign Up
+            </Link>
+            <span className="auth-button-spacing"></span>{" "}
+            <Link to="/login" className="btn btn-secondary">
+              Log In
+            </Link>
+          </div>
         </div>
       )}
 
