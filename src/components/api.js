@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+const BASE_URL = "https://travel-006b.onrender.com";
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -79,7 +79,7 @@ export const updateReview = (reviewId, updatedData) => {
 export const getAddedDestinations = async () => {
   try {
     const response = await axios.get(
-      "https://travelbackend-79eh.onrender.com/destinations/added-destinations"
+      "https://travel-006b.onrender.com/destinations/added-destinations"
     );
     return response.data;
   } catch (error) {
