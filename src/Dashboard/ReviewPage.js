@@ -24,7 +24,7 @@ const ReviewPage = () => {
   const [editReviewId, setEditReviewId] = useState(null);
 
   useEffect(() => {
-    fetchReviews(id, setReviews); // Pass fetchReviews as a dependency
+    fetchReviews(id, setReviews);
   }, [id]);
 
   const handleAddReview = async () => {
